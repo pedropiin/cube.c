@@ -1,6 +1,6 @@
 # cube.c
 <div align="center">
-    <img src="./spinning_cube.png"><br>
+    <img src="https://www.flickr.com/photos/198008016@N03/52781023613/in/dateposted-public/"><br>
 </div>
 
 C algorithm that generates a spinning 3d cube in the terminal with ASCII characters.
