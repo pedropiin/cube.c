@@ -10,7 +10,7 @@
 #define K1 40 //fixed z1 coordinate
 #define ROTATION_SPEED 0.045
 #define INCREMENT_SPEED 0.6
-#define OFFSET (-1 * CUBE_W)
+#define HOR_OFFSET (-1 * CUBE_W)
 
 /*
 CURIOSITY:
@@ -59,7 +59,7 @@ float new_coordinates_xy(int i, int j, int k, float A, float B, float C, int *xp
     float y = rotated_y(i, j, k, A, B, C);
     float z = rotated_z(i, j, k, A, B, C) + K2;
 
-    *xprojection = (int) (SCREEN_W/2 + OFFSET + K1 * x * 2 / z);
+    *xprojection = (int) (SCREEN_W/2 + HOR_OFFSET + K1 * x * 2 / z);
     *yprojection = (int) (SCREEN_H/2 + K1 * y / z);
 
     return z;
@@ -101,7 +101,7 @@ int main() {
 
         printf("\x1b[H");
         for (int i = 0; i < SCREEN_W * SCREEN_H; i++) {
-            putchar(i % SCREEN_W ? output[i] : 10);
+            putchar(i % SCREEN_W ? output[i] : '\n');
         }
 
         A += ROTATION_SPEED;
@@ -111,14 +111,3 @@ int main() {
     }
     return 0;
 }
-
-
-/*
-COISAS ALTERADAS:
-    - variaveis globais
-
-TESTAR:
-    - mudar valor k1 e k2
-    - mudar valores de A, B, C
-    - for interno principal sem mudar os parametros
-*/
