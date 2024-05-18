@@ -13,7 +13,7 @@
 #define HOR_OFFSET (-1 * CUBE_W)
 
 /*
-CURIOSITY:
+FUN FACT:
 While testing the best/most pleasing values for K1 and K2,
 realized that using Andy Sloane's (a1kon) formula plotted 
 the cube as if the user was inside it.
